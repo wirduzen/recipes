@@ -8,6 +8,8 @@ defaults:
     shell: bash
 jobs:
  call-flex-update:
+    permissions:
+      contents: write
     concurrency: flex-update-${{ github.ref }}
     uses: symfony/recipes/.github/workflows/callable-flex-update.yml@main
     with:
