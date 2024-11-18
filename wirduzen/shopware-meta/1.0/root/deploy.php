@@ -2,6 +2,6 @@
 
 namespace Deployer;
 
-require __DIR__ . '/.deploy-base.php';
+require __DIR__ . '/.deploy_base.php';
 
 import('inventory.yaml');
