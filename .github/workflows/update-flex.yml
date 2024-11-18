@@ -7,6 +7,9 @@ defaults:
   run:
     shell: bash
 jobs:
+  setup-dirs:
+    run:
+      - mkdir -p .github/flex-endpoint/archived
   call-flex-update:
     concurrency: flex-update-${{ github.ref }}
     uses: symfony/recipes/.github/workflows/callable-flex-update.yml@main
