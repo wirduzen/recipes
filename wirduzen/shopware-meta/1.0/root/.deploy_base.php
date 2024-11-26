@@ -67,7 +67,7 @@ task('deploy', [
 ]);
 
 after('deploy:symlink', 'php:reload');
-after('php:reload', 'sw:stop_message_workers')
+after('php:reload', 'sw:stop_message_workers');
 
 task('sw:update', static function() {
     run('cd {{release_path}} && {{bin/php}} bin/console system:update:finish --skip-asset-build');
