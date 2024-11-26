@@ -66,8 +66,13 @@ task('deploy', [
     'deploy:publish',
 ]);
 
-after('deploy:symlink', 'php:reload');
-after('php:reload', 'sw:stop_message_workers');
+after('deploy:symlink', 'reload:workers_and_php');
+
+task('reload:workers_and_php', [
+    'php:reload',
+    'sw:stop_message_workers'
+ ]);
+ 
 
 task('sw:update', static function() {
     run('cd {{release_path}} && {{bin/php}} bin/console system:update:finish --skip-asset-build');
