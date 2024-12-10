@@ -4,4 +4,4 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 
 | Package | Latest Recipe |
 | --- | --- |
-| [wirduzen/shopware-meta](https://packagist.org/packages/wirduzen/shopware-meta) | [1.1](wirduzen/shopware-meta/1.1) |
+| [wirduzen/shopware-meta](https://packagist.org/packages/wirduzen/shopware-meta) | [1.2](wirduzen/shopware-meta/1.2) |
