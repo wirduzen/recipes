@@ -3,7 +3,7 @@ imports:
     - shopdev
 inputs:
     nixpkgs:
-        url: github:NixOS/nixpkgs/nixos-unstable
+        url: github:NixOS/nixpkgs/nixos-24.05
     shopdev:
         url: github:wirduzen/shopdev
         flake: false
