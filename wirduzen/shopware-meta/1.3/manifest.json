@@ -1,0 +1,14 @@
+{
+  "copy-from-recipe": {
+    "root/": ""  
+  },
+  "gitignore": [
+    ".devenv*",
+    "devenv.local.nix",
+    ".direnv*",
+    "/custom/static-plugins/**/src/Resources/app/storefront/dist/storefront/js/",
+    "/custom/static-plugins/**/src/Resources/public/administration/js/",
+    "/src/**/Resources/app/storefront/dist/storefront/js/",
+    "/src/**/Resources/public/administration/js/"
+  ]
+}
