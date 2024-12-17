@@ -51,7 +51,7 @@ task('deploy:update_code')->setCallback(static function() {
             '--exclude=.gitlab-ci',
             '--exclude=.gitlab-ci.yml',
             '--exclude=deploy.php',
-	        '--exclude=.deploy-base.php',
+            '--exclude=.deploy-base.php',
             '--exclude=.composer-cache',
         ],
     ]);
