@@ -8,7 +8,7 @@ require 'recipe/common.php';
 
 set('bin/console', '{{bin/php}} {{release_or_current_path}}/bin/console');
 
-set('keep_releases', getenv("KEEP_RELEASES") ?? 3);
+set('keep_releases', getenv("KEEP_RELEASES") ?: 3);
 
 set('allow_anonymous_stats', false);
 set('writable_mode', 'chmod');
