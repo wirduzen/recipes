@@ -105,7 +105,16 @@ task('sw:theme_compile', function() {
     run('cd {{release_path}} && {{bin/php}} bin/console theme:compile');
 });
 
+task('sw:cleanup_old_caches', static function() {
+    $releases = get('releases_list');
+    foreach (array_slice($releases, 1) as $release) {
+        try {
+            run("rm -rf {{deploy_path}}/releases/$release/var/cache/*");
+        }catch (\Throwable){}
+    }
+});
 
+after('deploy:cleanup', 'sw:cleanup_old_caches');
 after('deploy:failed', 'deploy:unlock');
 
 
