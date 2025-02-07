@@ -11,6 +11,7 @@ set('bin/console', '{{bin/php}} {{release_or_current_path}}/bin/console');
 set('keep_releases', getenv("KEEP_RELEASES") ?: 3);
 
 set('allow_anonymous_stats', false);
+set('default_timeout', 900);
 set('writable_mode', 'chmod');
 add('executable_files', ['bin/console']);
 
