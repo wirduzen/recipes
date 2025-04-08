@@ -83,8 +83,8 @@ task('sw:update', static function() {
 });
 
 task('sw:activate_staging', static function() {
-    run('cd {{release_path}} && {{bin/php}} bin/console system:setup:staging')
-})
+    run('cd {{release_path}} && {{bin/php}} bin/console system:setup:staging');
+});
 
 task('sw:cache_clear', static function() {
     run('cd {{release_path}} && {{bin/php}} bin/console cache:clear --no-warmup');
@@ -95,7 +95,7 @@ task('sw:plugin_update', static function() {
     run('cd {{release_path}} && {{bin/php}} bin/console plugin:update:all');
 
     if(input()->hasOption('tag') && input()->getOption('tag')) {
-        invoke('sw:activate_staging')
+        invoke('sw:activate_staging');
     }
 });
 
